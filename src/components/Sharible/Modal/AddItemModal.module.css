@@ -8,16 +8,28 @@
    display: flex;
    justify-content: center;
    align-items: center;
-   transition: 0.2s;
    pointer-events: none;
    opacity: 0;
+}
+.container.active {
+   pointer-events: all;
+   opacity: 1;
 }
 .content {
    padding: 20px;
    border-radius: 10px;
    background: #fff;
+   max-width: 800px;
+   width: 100%;
 }
-.active {
-   pointer-events: all;
-   opacity: 1;
+.form {
+   display: flex;
+   flex-direction: column;
+   gap: 10px;
+}
+
+@media screen and (max-width: 800px) {
+   .content {
+      border-radius: 0;
+   }
 }

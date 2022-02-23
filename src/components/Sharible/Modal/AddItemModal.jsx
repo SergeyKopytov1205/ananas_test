@@ -1,6 +1,7 @@
 import React, { useState } from "react"
+import ButtonSmall from "../Buttons/ButtonSmall"
 import Input from "../Inputs/Input"
-import styles from './AddItemModal.module.css'
+import style from './AddItemModal.module.css'
 
 const AddItemModal = ({ close, isActive, sendData }) => {
    const [name, setName] = useState('')
@@ -27,15 +28,15 @@ const AddItemModal = ({ close, isActive, sendData }) => {
    }
 
    return (
-      <div className={`${styles.container} ${isActive ? `${styles.active}` : ''}`} onClick={closeModal}>
-         <div className={styles.content} onClick={(e) => { e.stopPropagation() }} >
-            <form onSubmit={handleSubmit}>
+      <div className={`${style.container} ${isActive ? `${style.active}` : ''}`} onClick={closeModal}>
+         <div className={style.content} onClick={(e) => { e.stopPropagation() }} >
+            <form onSubmit={handleSubmit} className={style.form}>
                <Input type='text' placeholder='Название организации' value={name} setValue={setName} />
                <Input type='text' placeholder='Адрес организации' value={address} setValue={setAddress} />
                <Input type='text' placeholder='ОГРН' value={ogrn} setValue={setOgrn} />
                <Input type='text' placeholder='ИНН' value={inn} setValue={setInn} />
                <Input type='date' placeholder='Дата регистрации' value={date} setValue={setDate} />
-               <button>Добавить организацию</button>
+               <ButtonSmall text='Добавить организацию' selector='success' />
             </form>
          </div>
       </div>

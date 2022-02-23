@@ -1,8 +1,9 @@
-import React from "react";
+import React from "react"
+import style from './ButtonAdd.module.css'
 
 const ButtonAdd = ({ onClick }) => {
    return (
-      <button onClick={onClick} >
+      <button className={style.button} onClick={onClick} >
          Добавить
       </button>
    )

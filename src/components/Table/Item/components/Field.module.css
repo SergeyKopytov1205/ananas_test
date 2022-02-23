@@ -1,0 +1,17 @@
+.container {
+   font-size: 1.1em;
+   font-weight: bold;
+   white-space: nowrap;
+}
+.container > span {
+   white-space: normal;
+   font-weight: normal;
+   font-style: normal;
+   font-style: italic;
+}
+
+@media screen and (max-width: 480px) {
+   .container {
+      font-size: 0.8em;
+   }
+}

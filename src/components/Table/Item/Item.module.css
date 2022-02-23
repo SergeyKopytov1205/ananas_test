@@ -1,0 +1,39 @@
+.container {
+   padding-bottom: 10px;
+   border-bottom: 1px solid black;
+   display: flex;
+   gap: 5px;
+}
+.container:last-child {
+   padding-bottom: 0;
+   border-bottom: none;
+}
+
+.content {
+   flex: 1 1 auto;
+}
+
+.wrapper {
+   width: 100%;
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
+
+.control {
+   display: flex;
+   flex-direction: column;
+   flex-wrap: wrap;
+   gap: 10px;
+   justify-content: space-evenly;
+}
+
+@media screen and (max-width: 800px) {
+   .container {
+      flex-direction: column;
+   }
+   .control {
+      flex-direction: row;
+      justify-content: flex-end;
+   }
+}

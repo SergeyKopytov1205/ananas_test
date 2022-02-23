@@ -1,0 +1,21 @@
+.button {
+   display: block;
+   width: 200px;
+   height: 30px;
+   border-radius: 10px;
+   border: none;
+   white-space: nowrap;
+}
+
+.success {
+   color: rgb(0, 134, 0);
+   background-color: rgba(0, 134, 0, 0.3);
+}
+.edit {
+   color: rgb(0, 15, 155);
+   background-color: rgba(0, 15, 155, 0.3);
+}
+.remove {
+   color: rgb(135, 0, 0);
+   background-color: rgba(135, 0, 0, 0.3);
+}

@@ -4,7 +4,7 @@ import styles from './Field.module.css'
 const Field = ({ name, data }) => {
    return (
       <div className={styles.container}>
-         {name} : {data}
+         {name} : <span>{data}</span>
       </div>
    )
 }
