@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import { getDate } from "../../../utils/utils"
 import ButtonSmall from "../../Sharible/Buttons/ButtonSmall"
 import Input from "../../Sharible/Inputs/Input"
 import Field from "./components/Field"
@@ -39,7 +40,7 @@ const Item = React.memo(({ name, address, inn, ogrn, date, removeItem, editItemA
             }
             <Field name='ИНН' data={inn} />
             <Field name='ОГРН' data={ogrn} />
-            <Field name='Дата регистрации' data={date} />
+            <Field name='Дата регистрации' data={getDate(date)} />
          </div>
          <div className={style.control}>
             {isEdit

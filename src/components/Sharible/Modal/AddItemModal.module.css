@@ -27,6 +27,32 @@
    flex-direction: column;
    gap: 10px;
 }
+.fieldset {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+.button_fetch {
+   display: block;
+   width: 200px;
+   height: 30px;
+   border-radius: 10px;
+   border: none;
+   white-space: nowrap;
+   color: rgb(0, 155, 0);
+   background-color: rgba(0, 155, 0, 0.3);
+   cursor: pointer;
+
+}
+.button_fetch:disabled {
+   color: rgb(190, 0, 0);
+   background-color: rgba(190, 0, 0, 0.3);
+   cursor: default;
+}
+.button_fetch.loading {
+   color: rgb(192, 163, 0);
+   background-color: rgba(192, 163, 0, 0.3);
+}
 
 @media screen and (max-width: 800px) {
    .content {
