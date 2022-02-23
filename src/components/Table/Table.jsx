@@ -2,7 +2,7 @@ import React from "react";
 import Item from "./Item/Item";
 import styles from './Table.module.css'
 
-const Table = ({ data }) => {
+const Table = ({ data, removeItem, editItemAddress }) => {
    if (data.length < 1) {
       return null
    }
@@ -18,6 +18,8 @@ const Table = ({ data }) => {
                   inn={item.inn}
                   ogrn={item.ogrn}
                   date={item.date}
+                  removeItem={removeItem}
+                  editItemAddress={editItemAddress}
                />
             )
          })}

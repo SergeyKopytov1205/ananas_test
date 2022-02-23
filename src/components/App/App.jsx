@@ -16,10 +16,25 @@ function App() {
     setState([...state, data])
   }
 
+  const removeItem = (inn) => {
+    const newState = state.filter(item => item.inn !== inn)
+    setState(newState)
+  }
+
+  const editItemAddress = (inn, address) => {
+    const newState = state.map(item => {
+      if (item.inn === inn) {
+        return { ...item, address }
+      }
+      return item
+    })
+    setState(newState)
+  }
+
   return (
     <Container>
       <ButtonAdd onClick={openModal} />
-      <Table data={state} />
+      <Table data={state} removeItem={removeItem} editItemAddress={editItemAddress} />
       {isAddItem && <AddItemModal isActive={isAddItem} close={setIsAddItem} sendData={addNewItem} />}
     </Container>
   );
